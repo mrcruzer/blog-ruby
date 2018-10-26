@@ -1,5 +1,20 @@
-<% @articles.each do |dime| %>
 
-    <a href="/articles/<%=dime.id%>" title=""> <%=dime.title%></a>
+<%= link_to "Articles", articles_path %>
+
+<% @articles.each do |arti| %>
+
+    <h2>
+        <%# Usando links %>
+        <%= link_to arti.title, arti %>
+    </h2>
+
+    <p>
+
+    <%= arti.body %>
+
+
+    </p>
+
+    
 
 <%end%>

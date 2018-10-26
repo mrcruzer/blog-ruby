@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_action :set_articles, only: [:show, :edit]
+  before_action :set_articles, only: [:show, :edit, :update, :destroy]
 
     # El index mostrara, con all, Modelo
   def index
@@ -28,13 +28,14 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
 
-    if @article.save
-
-      redirect_to @article
-
-    else
-
-      redirect_to :new
+    respond_to do |format|
+      if @article.save
+        format.html { redirect_to @article, notice: "Articulo Creado" }
+        format.json { render :show, status: :created, location: @article}
+      else
+        format.html {render 'new'}
+        format.json { render json: @article.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -45,22 +46,44 @@ class ArticlesController < ApplicationController
   end
 
 
-  # Metodo para actualizar
-  def update
+  # Metodo para borrar
+  def destroy
 
-    @article = Article.find(params[:id])
+    #usara el set_articles, Primero
 
+    @article.destroy
 
-    if @article = Article.update(article_params)
+    respond_to do |format|
 
-      redirect_to article_path
+      format.html { redirect_to articles_path }
+      format.json { head :no_content }
 
-    else
-      redirect_to :new
     end
 
 
-    
+  end
+
+
+  # Metodo para actualizar
+  def update
+
+    #usara el set_articles, Primero
+
+    respond_to do |format|
+
+      if @article.update(article_params)
+
+        format.html{ redirect_to article_path, notice: "Articulo Actualizado"}
+        format.json { render :show, status: :created, location: @article}
+
+      else
+
+        format.html { redirect_to 'edit' }
+        format.json { render json: @article.errors, status: :unprocessable_entity }
+
+      end
+    end
+
   end
 
 

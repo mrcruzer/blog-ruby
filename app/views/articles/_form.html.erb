@@ -1,9 +1,24 @@
-<%# Esto es un partial %>
+<%# Esto es un formulario y un partial %>
 
-<%= form_with(model: @article) do |form| %>
+<%= form_with(model: article) do |form| %>
+
+<%# @article.errors.each do |f| %>
+<%#= f %>
+<%# <% @article.errors.map do |f| %>
+
+<%# <%= f %>
+
+<%# <% end %>
+<%#= msg %> 
+<%# end %>
+<%# end %>
+
     <%= form.label "Titulo:"%>
     <%= form.text_field :title%>
     <%= form.label "Cuerpo"%>
     <%= form.text_area :body%>
     <%= form.submit "Enviar"%>
+    <%= link_to 'Atras', root_path %>
+
+
 <%end%>

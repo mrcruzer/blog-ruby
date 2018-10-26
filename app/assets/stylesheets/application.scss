@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+$fondo: #fbb901;
+$color-a: #fbb901;
+$color-b: #e62a76;
+$color-c: #774898;
+$color-d: #00a8b5;
+
+ $colors: (
+     fondo: $fondo,
+     color-a: $color-a,
+     color-b: $color-b,
+     color-c: $color-c,
+     color-d: $color-d
+ ); 
+
+
+ body {
+     background-color: $fondo;
+ }
