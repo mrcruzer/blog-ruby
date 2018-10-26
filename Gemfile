@@ -5,6 +5,8 @@ ruby '2.5.1'
 
 # iconv
 gem "iconv", "~> 1.0.3"
+# Boostrap
+gem 'bootstrap', '~> 4.1.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record

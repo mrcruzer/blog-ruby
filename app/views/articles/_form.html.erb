@@ -17,8 +17,8 @@
     <%= form.text_field :title%>
     <%= form.label "Cuerpo"%>
     <%= form.text_area :body%>
-    <%= form.submit "Enviar"%>
-    <%= link_to 'Atras', root_path %>
+    <%= form.submit "Enviar", class: "btn btn-info"%>
+    <%= link_to 'Atras', root_path, class: "btn btn-success" %>
 
 
 <%end%>

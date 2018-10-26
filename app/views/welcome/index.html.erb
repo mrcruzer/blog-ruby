@@ -1,20 +1,10 @@
-
-<%= link_to "Articles", articles_path %>
-
 <% @articles.each do |arti| %>
+    <div class="jumbotron color-b">
+        <h2 class="text-center">
+            <%# Usando links %>
+            <%= link_to arti.title, arti %>
+        </h2>
 
-    <h2>
-        <%# Usando links %>
-        <%= link_to arti.title, arti %>
-    </h2>
-
-    <p>
-
-    <%= arti.body %>
-
-
-    </p>
-
-    
-
+        <p class="text-center"><%= arti.body %></p>
+    </div>
 <%end%>

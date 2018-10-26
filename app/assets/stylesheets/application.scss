@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  */
-$fondo: #fbb901;
+ 
+
+$fondo: #fff;
 $color-a: #fbb901;
 $color-b: #e62a76;
 $color-c: #774898;
@@ -30,4 +32,8 @@ $color-d: #00a8b5;
 
 body {
     background-color: $fondo;
+}
+
+.nav-link {
+    color: #fff !important;
 }
