@@ -55,8 +55,8 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
 
-      format.html { redirect_to articles_path }
-      format.json { head :no_content }
+    format.html { redirect_to articles_path }
+    format.json { head :no_content }
 
     end
 
