@@ -20,8 +20,7 @@ $color-a: #fbb901;
 $color-b: #e62a76;
 $color-c: #774898;
 $color-d: #00a8b5;
-
- $colors: (
+$colors : (
      fondo: $fondo,
      color-a: $color-a,
      color-b: $color-b,
@@ -35,5 +34,35 @@ body {
 }
 
 .nav-link {
-    color: #fff !important;
+    color: white !important;
+}
+
+.color-a {
+    background-color: #fbb901;
+}
+
+.color-b {
+    background-color: #e62a76;
+}
+
+.color-c {
+    background-color: #774898;
+}
+
+.color-d {
+    background-color: #00a8b5;
+}
+
+.jumbotron {
+    background: #00a8b5;
+}
+
+.area-text {
+    min-height: 50px;
+    max-height: 150px;
+    height: 150px;
+}
+
+.list-group {
+    margin-bottom: 10px;
 }

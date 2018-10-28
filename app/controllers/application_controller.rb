@@ -1,3 +1,10 @@
 class ApplicationController < ActionController::Base
+protect_from_forgery with: :exception, prepend: true
+
+    before_action :cargar
+
+    def cargar
+        @categories = Category.all
+    end
     
 end

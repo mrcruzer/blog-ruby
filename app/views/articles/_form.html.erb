@@ -1,24 +1,28 @@
 <%# Esto es un formulario y un partial %>
 
-<%= form_with(model: article) do |form| %>
-
-<%# @article.errors.each do |f| %>
-<%#= f %>
-<%# <% @article.errors.map do |f| %>
-
-<%# <%= f %>
-
-<%# <% end %>
-<%#= msg %> 
-<%# end %>
-<%# end %>
-
-    <%= form.label "Titulo:"%>
-    <%= form.text_field :title%>
-    <%= form.label "Cuerpo"%>
-    <%= form.text_area :body%>
-    <%= form.submit "Enviar", class: "btn btn-info"%>
-    <%= link_to 'Atras', root_path, class: "btn btn-success" %>
-
-
-<%end%>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 mt-3">
+            <div class="jumbotron">
+                    <fieldset>
+                        <h1><%= "#{titulo} Articulo" %></h1>
+                            <%= form_with(model: article) do |form| %>
+                                <div class="form-group row">     
+                                    <h3><%= form.label "Titulo:", class: "col-md-6 col-form-label"%></h3>
+                                    <%= form.text_field :title, class: "pt-3 col-md-6"%>
+                                </div>
+                                <div class="form-group row">
+                                    <h3><%= form.label "Cuerpo:", class: "col-md-6 col-form-label"%></h3>
+                                    <%= form.text_area :body, class: "col-md-6 area-text"%>
+                                </div>
+                                <div class="form-group">
+                                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token.to_s %>" />
+                                    <%= form.submit "Enviar", class: "btn btn-success btn-lg col-md-3"%>
+                                    <%= link_to 'Atras', root_path, class: "btn btn-secondary btn-lg col-md-3" %>
+                                </div>
+                            <%end%>
+                    </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
