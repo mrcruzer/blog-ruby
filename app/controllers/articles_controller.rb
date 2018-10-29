@@ -31,7 +31,8 @@ class ArticlesController < ApplicationController
 
     # Metodo para crear
   def create
-    @article = Article.new(article_params)
+    @article = current_user.articles.new(article_params)
+        # current_user = detecta si el usuario esta logeado
 
     respond_to do |format|
       if @article.save

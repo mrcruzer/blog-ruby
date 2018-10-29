@@ -18,12 +18,12 @@
 
           <div class="form-group row">
             <h3><%= form.label "Name:", class: "col-md-6 col-form-label"%></h3>
-            <%= form.text_field :name, class:"col-md-6" %>
+            <%= form.text_field :name, id: :category_name, class:"col-md-6" %>
           </div>
 
           <div class="form-group row">
             <h3><%= form.label "Color:", class: "col-md-6 col-form-label"%></h3>
-            <%= form.text_field :color, class:"col-md-6" %>
+            <%= form.text_field :color, id: :category_color, class:"col-md-6" %>
           </div>
 
           <div class="form-group">
