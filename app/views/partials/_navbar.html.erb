@@ -15,7 +15,16 @@
       <li class="nav-item">
         <%= link_to "Contacto", welcome_contactos_path, class: "nav-link"%>
       </li>
+      <li class="nav-item">
+        <%if user_signed_in?%>
+          <%= link_to "Cerrar Sesion", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        <%else%>
+          <li><%= link_to "Inicia Sesion", new_user_session_path, class: "nav-link" %></li>
+          <%= link_to "Registrarte Ahora", new_user_registration_path, class: "nav-link" %>
+        <%end%>
+      </li>
     </ul>
+    
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="text" placeholder="Search">
       <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>

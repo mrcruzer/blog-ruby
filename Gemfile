@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+# devise
+gem 'devise'
 # iconv
 gem "iconv", "~> 1.0.3"
 # meta-tags

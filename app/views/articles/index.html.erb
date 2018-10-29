@@ -3,8 +3,8 @@
         <% @articles.each do |article| %>
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="jumbotron">
-                    <h1><%= link_to article.title, article %></h1>
-                    <p><%= article.body %></p>
+                    <h1><strong><%= link_to article.title, article, class: "decoracion" %></strong></h1>
+                    <h5><strong><%= article.body %></strong></h5>
 
                     <%= link_to "Mostrar", article, class: "btn btn-success"%>
                     <%= link_to "Editar", edit_article_path(article), class: "btn btn-warning" %>
