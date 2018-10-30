@@ -20724,3 +20724,2647 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 581ms (Views: 534.7ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-10-30 12:11:17 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (29.4ms)
+  Rendered partials/_navbar.html.erb (3.3ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.4ms)
+Completed 200 OK in 1045ms (Views: 974.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 12:11:26 -0400
+Processing by ArticlesController#new as HTML
+Completed 401 Unauthorized in 28ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-30 12:11:26 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/devise-4.5.0/app/views/devise/sessions/new.html.erb within layouts/application (321.2ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.4ms)
+Completed 200 OK in 404ms (Views: 372.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-10-30 12:11:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C/XTNyKbujeL56vdNANc1Fb/IJRZI/t31TxOGpgW+myhg4WP9/w/Jp6CNor6y8SfHbiwkjzcqxodEte7IBTVAg==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/articles/new
+Completed 302 Found in 217ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 12:11:35 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (64.4ms)
+  Rendered articles/new.html.erb within layouts/application (96.0ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 176ms (Views: 129.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 12:11:44 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7h8Zz0GGZeE7A/UeXh8+9OTVaMfaUUEBszJwHnfmMZUX8PHQlRncHxNemhGyG5B2uQKt+JrrGQXJ/yj1fO/EPw==", "article"=>{"title"=>"hola1", "body"=>"hola1"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[36mArticle Create (0.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "hola1"], ["body", "hola1"], ["created_at", "2018-10-30 16:11:44.529101"], ["updated_at", "2018-10-30 16:11:44.529101"], ["user_id", 1]]
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (152.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+Redirected to http://localhost:3000/articles/24
+Completed 200 OK in 298ms (ActiveRecord: 153.4ms)
+
+
+Started GET "/articles/24" for 127.0.0.1 at 2018-10-30 12:11:44 -0400
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:101
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:25
+  Rendered articles/show.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 42.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 12:11:48 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/articles/24" for 127.0.0.1 at 2018-10-30 12:11:53 -0400
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GB6xu8XtY9q9rSq+gSQAAywXdDQvd2TgyhvBmp1keaPh8VmkEXLaJJXwRbFtIK6BccCxC2/NPOSw1plxlm2MCQ==", "id"=>"24"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:101
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:60
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 24]]
+  ↳ app/controllers/articles_controller.rb:60
+  [1m[35m (104.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:60
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 110ms (ActiveRecord: 105.4ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-10-30 12:11:54 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (0.9ms)
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:11:56 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [2 times] (9.8ms)
+  Rendered categories/index.html.erb within layouts/application (12.6ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `color' for nil:NilClass):
+    1: <style type="text/css" media="screen">
+    2:   <%= ".#{category.name}" %> {
+    3:     background: <%= @category.color %> !important ;
+    4:   }
+    5: 
+    6: </style>
+  
+app/views/categories/_category.html.erb:3:in `_app_views_categories__category_html_erb__2418460129673146755_36811820'
+app/views/categories/index.html.erb:2:in `_app_views_categories_index_html_erb__1443887182168361633_42827000'
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:13:20 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [2 times] (0.4ms)
+  Rendered categories/index.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.5ms)
+Completed 200 OK in 39ms (Views: 37.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 12:13:27 -0400
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (105.1ms)
+  Rendered categories/new.html.erb within layouts/application (105.9ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 175ms (Views: 141.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 12:13:47 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KID9F9K38RBnMjDMtswzPPBptk17k+aZNVkrd3QKYMrRbxUIBihI7k9vX8NayJ2+rb5zcjspvp1PlHOcfwOVYA==", "category"=>{"name"=>"hola4", "color"=>"#a417d0"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `Categories' for #<User:0x00007f55e022a550>
+Did you mean?  categories=
+               category_ids):
+  
+app/controllers/categories_controller.rb:31:in `create'
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:14:14 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [2 times] (0.4ms)
+  Rendered categories/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (22.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 12:14:18 -0400
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.9ms)
+  Rendered categories/new.html.erb within layouts/application (2.8ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 12:14:30 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2FmGCpG4PLcDfWdQko+TrCrvzEuuUz3NmT79WtgQDk8htm4VRSeFSSsgCF9+iz0udzgJdO7pZcnj86Wx0xn75Q==", "category"=>{"name"=>"sdsd", "color"=>"#1433ed"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:34
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "color", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "sdsd"], ["color", "#1433ed"], ["created_at", "2018-10-30 16:14:30.229929"], ["updated_at", "2018-10-30 16:14:30.229929"], ["user_id", 1]]
+  ↳ app/controllers/categories_controller.rb:34
+  [1m[35m (189.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:34
+Redirected to http://localhost:3000/categories/5
+Completed 302 Found in 197ms (ActiveRecord: 189.9ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:14:30 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.5ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:14:34 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [3 times] (0.7ms)
+  Rendered categories/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.3ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2018-10-30 12:14:41 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/3/edit" for 127.0.0.1 at 2018-10-30 12:14:43 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.4ms)
+  Rendered categories/edit.html.erb within layouts/application (3.4ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 39ms (Views: 35.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/categories/3" for 127.0.0.1 at 2018-10-30 12:14:53 -0400
+Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tvm0QJ8Ekldd13BtoVMYbJRyMRSpxwDyqxbKHOMANv3ex+XswOhgCTUTWiJvlrugZNfaSa4GssaTQnAKz7mGjQ==", "category"=>{"name"=>"Cursos", "color"=>"#c06a23"}, "commit"=>"Enviar", "id"=>"3"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:48
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:48
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/edit.html.erb within layouts/application (2.5ms)
+  Rendered partials/_navbar.html.erb (1.2ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.6ms)
+Completed 200 OK in 40ms (Views: 36.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2018-10-30 12:14:56 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (0.9ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:14:57 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [3 times] (0.6ms)
+  Rendered categories/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.9ms)
+  Rendered partials/_notificaciones.html.erb (0.6ms)
+  Rendered partials/_panel.html.erb (0.7ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-10-30 12:15:00 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:15:09 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [3 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-10-30 12:15:12 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:15:19 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [3 times] (0.7ms)
+  Rendered categories/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 55.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:15:21 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5/edit" for 127.0.0.1 at 2018-10-30 12:15:23 -0400
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.2ms)
+  Rendered categories/edit.html.erb within layouts/application (3.0ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.6ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/categories/5" for 127.0.0.1 at 2018-10-30 12:15:30 -0400
+Processing by CategoriesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZ42N2nCzc2umeDWaFli0/xkZ7jdupmHY1TBTd2QlI3KaHNwVUSYaz8wkTTX7ZGh9Q87aBSa6EWyU6hxy6x9dA==", "category"=>{"name"=>"sdsd", "color"=>"#9d14c8"}, "commit"=>"Enviar", "id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:48
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:48
+  [1m[36mCategory Update (0.3ms)[0m  [1m[33mUPDATE "categories" SET "color" = ?, "updated_at" = ? WHERE "categories"."id" = ?[0m  [["color", "#9d14c8"], ["updated_at", "2018-10-30 16:15:30.592714"], ["id", 5]]
+  ↳ app/controllers/categories_controller.rb:48
+  [1m[35m (192.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:48
+Redirected to http://localhost:3000/categories/5
+Completed 302 Found in 200ms (ActiveRecord: 193.0ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:15:30 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:71
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:15:32 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [3 times] (0.7ms)
+  Rendered categories/index.html.erb within layouts/application (3.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 42.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:16:55 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [3 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (18.3ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  Rendered partials/_panel.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 57.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 12:17:00 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.5ms)
+  Rendered categories/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 12:17:09 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eTwsdTBXlSwsCKhYTfg+KSW78V6jYI1Bzl/YFyBzhbaA08Rq5Mgs0gRVx1eh/JCreGw0YePa1UW0koD8K3pwHA==", "category"=>{"name"=>"sdsdsdsdsd", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "color", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?)[0m  [["name", "sdsdsdsdsd"], ["color", "#000000"], ["created_at", "2018-10-30 16:17:09.677924"], ["updated_at", "2018-10-30 16:17:09.677924"], ["user_id", 1]]
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (207.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+Redirected to http://localhost:3000/categories/6
+Completed 302 Found in 214ms (ActiveRecord: 208.2ms)
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2018-10-30 12:17:09 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.0ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:17:14 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.9ms)
+  Rendered categories/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:17:21 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.7ms)
+  Rendered categories/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2018-10-30 12:17:29 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.4ms)
+Completed 200 OK in 52ms (Views: 49.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:17:35 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.6ms)
+  Rendered categories/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:25:52 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.5ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-10-30 12:25:53 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2018-10-30 12:25:55 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:25:56 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2018-10-30 12:25:57 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 48ms (Views: 44.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:25:58 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2018-10-30 12:25:59 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:26:00 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2018-10-30 12:26:01 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:26:08 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 12:26:17 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (11.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 52ms (Views: 46.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-10-30 12:26:22 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.9ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.8ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:26:25 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2018-10-30 12:26:26 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.6ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 12:26:27 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.0ms)
+Completed 200 OK in 46ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:26:29 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.7ms)
+  Rendered categories/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:54:24 -0400
+Processing by CategoriesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mrcruzer/Escritorio/Ruby/blog-ruby/app/models/category.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...dates :name, :color, presence :true
+...                              ^):
+  
+app/models/category.rb:6: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+app/controllers/application_controller.rb:7:in `cargar'
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 12:54:48 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.6ms)
+  Rendered categories/index.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (18.8ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 94ms (Views: 61.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 12:54:53 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.0ms)
+  Rendered categories/new.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.0ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 12:54:58 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BfnU8ulljeuZA3T0imOW1DRTuWsXON2t7xvyzr4xQyr8FjztPfo0FbFeG/tmZzhWaYR8VFeChamV1qoltTi2gA==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.3ms)
+  Rendered categories/new.html.erb within layouts/application (3.2ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 53ms (Views: 46.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 14:12:04 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.6ms)
+  Rendered categories/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2018-10-30 14:12:06 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 44ms (Views: 40.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 14:12:13 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 14:16:29 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I3/q1zh2+Xn/Cp5E2Q6BSHNOwVSlMS9ODAMrhxfgCr/akALI7OlAh9dX8Us1Ci/KLpkEa+WLd0p2znNsHOn/FQ==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.6ms)
+  Rendered categories/new.html.erb within layouts/application (3.6ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 51ms (Views: 44.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 14:23:05 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (3.0ms)
+  Rendered partials/_notificaciones.html.erb (0.6ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (9.3ms)
+Completed 200 OK in 73ms (Views: 70.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 14:23:11 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jBl/ehT+K5xJMO6YuAeEQB1LoL0w7g7ya/5a8J+Ds3Z19pdlwGGSYmFtgZdUAyrCQJxlgnBUVvYRMwIblIpG3A==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/application (2.6ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 14:24:35 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (17.5ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.8ms)
+Completed 200 OK in 266ms (Views: 256.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 14:25:10 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (4.8ms)
+  Rendered categories/new.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 42ms (Views: 41.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 14:25:14 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fsmTHa6LAEeT/g8TUW9ImAypSG1iveaxp3LyZxL5ljWHJnsCehS5ubujYBy9a+YaUX6NUiIHvrXdv6qMGfBjnw==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.9ms)
+  Rendered categories/new.html.erb within layouts/application (2.6ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 53ms (Views: 44.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 14:39:03 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (17.3ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.7ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 14:39:34 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (242.6ms)
+Completed 500 Internal Server Error in 283ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_categories_path' for #<#<Class:0x00007f4ea014f758>:0x00007f4e997b7c00>
+Did you mean?  new_category_path):
+    1: <div class="list-group">
+    2:   <%= link_to "Categorias", new_categories_path, class: "list-group-item list-group-item-action active" %>
+    3:     <% @categories.each do |categoria| %>
+    4:         <%= link_to categoria.name, categoria, class: "list-group-item list-group-item-action" %>
+    5:     <%end%>
+  
+app/views/partials/_panel.html.erb:2:in `_app_views_partials__panel_html_erb__1562509779797606808_69987772358400'
+app/views/layouts/application.html.erb:32:in `_app_views_layouts_application_html_erb__2305014122135013007_69987779538840'
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 14:39:51 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 14:39:55 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-10-30 14:39:57 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.0ms)
+  Rendered partials/_notificaciones.html.erb (0.2ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 55ms (Views: 51.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/3" for 127.0.0.1 at 2018-10-30 14:39:58 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.6ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/5" for 127.0.0.1 at 2018-10-30 14:40:00 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/6" for 127.0.0.1 at 2018-10-30 14:40:01 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.5ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 40.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2018-10-30 14:40:02 -0400
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT  "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:70
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 45.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 14:40:04 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.4ms)
+  Rendered categories/new.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 14:50:15 -0400
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mrcruzer/Escritorio/Ruby/blog-ruby/app/models/article.rb:9: syntax error, unexpected keyword_in, expecting '}'
+... validates :title, length: { in 5..25 }
+...                             ^~
+/home/mrcruzer/Escritorio/Ruby/blog-ruby/app/models/article.rb:9: syntax error, unexpected '}', expecting keyword_end
+...es :title, length: { in 5..25 }
+...                              ^
+/home/mrcruzer/Escritorio/Ruby/blog-ruby/app/models/article.rb:10: syntax error, unexpected ':', expecting '}'
+...idates :body, length { minimum: 25}
+...                              ^):
+  
+app/models/article.rb:9: syntax error, unexpected keyword_in, expecting '}'
+app/models/article.rb:9: syntax error, unexpected '}', expecting keyword_end
+app/models/article.rb:10: syntax error, unexpected ':', expecting '}'
+app/controllers/articles_controller.rb:12:in `index'
+Started GET "/" for 127.0.0.1 at 2018-10-30 14:50:26 -0400
+Processing by ArticlesController#index as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/mrcruzer/Escritorio/Ruby/blog-ruby/app/models/article.rb:10: syntax error, unexpected ':', expecting '}'
+...idates :body, length { minimum: 25}
+...                              ^):
+  
+app/models/article.rb:10: syntax error, unexpected ':', expecting '}'
+app/controllers/articles_controller.rb:12:in `index'
+Started GET "/" for 127.0.0.1 at 2018-10-30 14:50:42 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (10.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (18.0ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.7ms)
+Completed 200 OK in 89ms (Views: 64.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:50:53 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.3ms)
+  Rendered articles/new.html.erb within layouts/application (3.1ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 42ms (Views: 35.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:50:57 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IacWMU0pCQO94kKdXLnzVZMLMjoa21B+anTP7FO6Yq/YSP4umbaw/ZW/LZKwvV3Xztz3BVphCHoQuZcHWLOXBQ==", "article"=>{"title"=>"ssd", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ssd"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.4ms)
+  Rendered articles/new.html.erb within layouts/application (2.1ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 48ms (Views: 41.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:51:00 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IacWMU0pCQO94kKdXLnzVZMLMjoa21B+anTP7FO6Yq/YSP4umbaw/ZW/LZKwvV3Xztz3BVphCHoQuZcHWLOXBQ==", "article"=>{"title"=>"ssd", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "ssd"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 41ms (Views: 35.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:51:43 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (2.6ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:51:47 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XLVYI7O8zDDpc2M9P//ckYy/OjP7lvKViFyyazWGoCWlWrA8ZyN1zsEuDDLT+3IT0Wj/DLssqpHykeqAPo9Vjw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[36mArticle Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", ""], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 50ms (Views: 42.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:51:58 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.6ms)
+Completed 200 OK in 69ms (Views: 40.2ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:52:01 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"24hi+y7TTHvHrylUCiXPIy8JpCrefmp34d7iswnQbqsiZ4rk+kz1he/yRlvmIWGhct5hFZ7EMnObE7pYAtmbAQ==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (2.5ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.9ms)
+Completed 200 OK in 51ms (Views: 45.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:52:28 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.9ms)
+  Rendered articles/new.html.erb within layouts/application (6.9ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.6ms)
+Completed 200 OK in 234ms (Views: 193.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:52:30 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (3.4ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.5ms)
+Completed 200 OK in 40ms (Views: 36.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:52:44 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o8snRgxxh4ZCL12X0Hv3Ei5ljCqcqRkWgmPVo4/qwnxaJM9Z2O4+eGpyMpg8f1mQc7JJFdwTQRL4ro1IhOM31g==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/new.html.erb within layouts/application (2.5ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.4ms)
+Completed 200 OK in 65ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:52:47 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o8snRgxxh4ZCL12X0Hv3Ei5ljCqcqRkWgmPVo4/qwnxaJM9Z2O4+eGpyMpg8f1mQc7JJFdwTQRL4ro1IhOM31g==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.6ms)
+Completed 200 OK in 54ms (Views: 49.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 14:53:19 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.3ms)
+  Rendered categories/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.2ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.4ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 14:53:23 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CNFSzaFNE0MQnPAZbyTQ7e/qJL89ILzmBtvAd6MwQH+3pEzimDff3ZzqMSxmZu/pCZhN0PSk87ZX4u0Q/nTacA==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.1ms)
+  Rendered categories/new.html.erb within layouts/application (4.3ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 62ms (Views: 51.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 14:54:27 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.6ms)
+  Rendered categories/index.html.erb within layouts/application (3.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 14:54:30 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:54:34 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.0ms)
+  Rendered articles/new.html.erb within layouts/application (4.4ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 46ms (Views: 42.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:38 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (3.0ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 39ms (Views: 33.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:40 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 40ms (Views: 35.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:41 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (4.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:42 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 40ms (Views: 35.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:42 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.2ms)
+  Rendered articles/new.html.erb within layouts/application (3.2ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.4ms)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:42 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.6ms)
+  Rendered articles/new.html.erb within layouts/application (3.6ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 48ms (Views: 42.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:42 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/new.html.erb within layouts/application (7.2ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 44ms (Views: 39.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:54:48 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CAnUwbgQXjhqx0OOYI/iZiz3SY8mIutgeU/9ZDenfo3x5jzebI/nxkKaLIGMi0zkcSCMsGaYs2QDgqWPPK6LJw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/new.html.erb within layouts/application (2.2ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 35.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 14:54:57 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 14:55:00 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oyNXplWOt7L8DrfR+B+mPRRf6RkaFHrZyM8PkIuoRrscVkmJbPR7LHB4duTxXZk58i2AdtOQNYmZ9iL31uzctA==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.1ms)
+  Rendered categories/new.html.erb within layouts/application (2.9ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 46ms (Views: 40.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 14:55:13 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (6.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 43ms (Views: 41.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:55:15 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (3.2ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:55:19 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2qLTf/COJmEanQa5qOu28f511XBsYalz2L6nC7NmApkjTTtgJBGfnzLAabZE7xhzo6IQTyzb8Xeic//guG/3Mw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 45ms (Views: 40.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:55:23 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2qLTf/COJmEanQa5qOu28f511XBsYalz2L6nC7NmApkjTTtgJBGfnzLAabZE7xhzo6IQTyzb8Xeic//guG/3Mw==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 39ms (Views: 34.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:56:37 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  
+app/models/article.rb:9:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:26:in `new'
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:59:13 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.7ms)
+
+
+  
+ArgumentError (Range unspecified. Specify the :in, :within, :maximum, :minimum, or :is option.):
+  
+app/models/article.rb:9:in `<class:Article>'
+app/models/article.rb:1:in `<main>'
+app/controllers/articles_controller.rb:26:in `new'
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 14:59:30 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.7ms)
+  Rendered articles/new.html.erb within layouts/application (2.4ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.7ms)
+Completed 200 OK in 67ms (Views: 40.6ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 14:59:33 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DdX0vuJNqcBUfkWvBK5SJgcguk1M5G5e+7aOGnharVX0OhyhNtIQPnwjKqDoqvykWvd/cgxeNlqBe9bxc1NY/w==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.8ms)
+  Rendered articles/new.html.erb within layouts/application (4.0ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 58ms (Views: 49.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:01:03 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.3ms)
+  Rendered articles/new.html.erb within layouts/application (3.0ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (7.1ms)
+Completed 200 OK in 68ms (Views: 41.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:01:07 -0400
+Processing by ArticlesController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ksjXuXUTvcRQwQb5bxR/0ujIo25lB2+O1sAfeWCsDJNrJz+moYwEOnicafaDENFQtR9mUSW9N4qsDUeSa6X5OQ==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+Completed 422 Unprocessable Entity in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Title can't be blank, Title is too short (minimum is 5 characters), Body can't be blank, Body is too short (minimum is 25 characters)):
+  
+app/controllers/articles_controller.rb:38:in `block in create'
+app/controllers/articles_controller.rb:37:in `create'
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:02:20 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/home/mrcruzer/Escritorio/Ruby/blog-ruby/app/views/articles/_form.html.erb:9: syntax error, unexpected tLABEL
+...rm_with(model: article), local: true do |form| @output_buffe...
+...                         ^~~~~~
+/home/mrcruzer/Escritorio/Ruby/blog-ruby/app/views/articles/_form.html.erb:29: syntax error, unexpected keyword_ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/articles/_form.html.erb:9: syntax error, unexpected tLABEL
+app/views/articles/_form.html.erb:29: syntax error, unexpected keyword_ensure, expecting end-of-input
+app/views/articles/new.html.erb:2:in `_app_views_articles_new_html_erb__4315755775938778684_69834402510080'
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:03:14 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.6ms)
+  Rendered articles/new.html.erb within layouts/application (2.4ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.5ms)
+Completed 200 OK in 45ms (Views: 42.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:03:17 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cm1W/cTAKvAtbLhtueWh274NPsaHypizFYLNCD9NyWKLgr7iEF+TDgUx12JV4Q9Z49r7+cdwwLdvT5XjNEQ8yA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Title can't be blank, Title is too short (minimum is 5 characters), Body can't be blank, Body is too short (minimum is 25 characters)):
+  
+app/controllers/articles_controller.rb:38:in `block in create'
+app/controllers/articles_controller.rb:37:in `create'
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:03:38 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cm1W/cTAKvAtbLhtueWh274NPsaHypizFYLNCD9NyWKLgr7iEF+TDgUx12JV4Q9Z49r7+cdwwLdvT5XjNEQ8yA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/new.html.erb within layouts/application (2.2ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.9ms)
+Completed 200 OK in 74ms (Views: 43.3ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:03:40 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8IxbEmX6JK5LkVXx5q2NiOYwvk80Asb7vFQwEo27ikQJY7MNsWWdUGPMOv4KqSMKu+d7cHS4nv/GmWj5hrJ/7g==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.8ms)
+Completed 200 OK in 52ms (Views: 46.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:03:41 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wIAii2jknTFJhdC3ckA5JaxP1CR07raR/ADn9S+SjyY5b8qUvHskz2HYv7ieRJen8ZgRGzRU7pWGzb8eJJt6jA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.5ms)
+  Rendered articles/new.html.erb within layouts/application (2.3ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 40ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:03:43 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ccVKy5c+loTCt0PuXYUzFol/lm8nIh/8+N0Umz5Nzu6IKqLUQ6EveurqLOGxgZ2U1KhTUGeYR/iCEExwNUQ7RA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (3.0ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 44ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-10-30 15:05:20 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:05:22 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.9ms)
+  Rendered articles/new.html.erb within layouts/application (2.9ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.5ms)
+Completed 200 OK in 40ms (Views: 37.6ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:05:24 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q93vX1bQKby8lmoEYRCInpHlestqLULr6MjxtOjaKzQp6C5rCJWjCeBwuDsVWDtEaPMcFMtlYMVdTSobPLoVMg==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.4ms)
+  Rendered articles/new.html.erb within layouts/application (3.3ms)
+  Rendered partials/_navbar.html.erb (0.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 44ms (Views: 39.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-10-30 15:13:35 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (18.8ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.6ms)
+Completed 200 OK in 73ms (Views: 66.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:13:38 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (1.8ms)
+  Rendered articles/new.html.erb within layouts/application (2.8ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.4ms)
+Completed 200 OK in 50ms (Views: 45.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:13:41 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sYWh5lykNJWpfrZA4M6DV++wu1cyfz4jHMr5ppIyXV0zsGDSAuG+IPWYZH+UhjCNFqbdiJM3HA2pTyIJRlJjWw==", "article"=>{"title"=>"Titulo30", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[36mArticle Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Titulo30"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.1ms)
+  Rendered articles/new.html.erb within layouts/application (2.9ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.6ms)
+Completed 200 OK in 71ms (Views: 63.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-10-30 15:19:21 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (10.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (17.3ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (6.7ms)
+Completed 200 OK in 278ms (Views: 267.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:19:24 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (5.2ms)
+  Rendered articles/new.html.erb within layouts/application (6.2ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.7ms)
+Completed 200 OK in 49ms (Views: 43.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 15:19:53 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.3ms)
+  Rendered categories/new.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.4ms)
+  Rendered partials/_notificaciones.html.erb (0.6ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.8ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 15:19:56 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X02GZYx+B3skYupWhmKNvZ95u4Z/7eRNfoMYDDawGGzgOJhKtQTL5agUK2OPILK5eQvS6bZpqx0vujVra/SCYw==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.7ms)
+  Rendered categories/new.html.erb within layouts/application (3.7ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (2.0ms)
+Completed 200 OK in 67ms (Views: 56.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 15:20:36 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.5ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  Rendered partials/_panel.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 15:20:38 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.5ms)
+  Rendered categories/new.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 15:20:40 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iDP7Q8PVHVnJEzniwxvdR2Ybr4xlSjGz0nXTTpn/J9E3RuVs+q/Rx0Vl+NfKWeJDgGnG46zOfuODTP4pxLu93g==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.4ms)
+  Rendered categories/new.html.erb within layouts/application (3.2ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 15:21:03 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.5ms)
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 15:21:05 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.8ms)
+  Rendered categories/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.5ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 15:21:06 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G3+8r0feJISMEyZ/+5euxVJSVgOjVuG81/mUw9nl3XSkCqKAfqToGgBl50ry1ZHBtCA/bGrSruyGwLmkhKFHew==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (2.3ms)
+  Rendered categories/new.html.erb within layouts/application (3.1ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 42ms (Views: 37.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 15:21:34 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.4ms)
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 15:21:36 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.2ms)
+  Rendered categories/new.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 15:21:39 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7/WvBDmO67b4XC5gpgMfMSMIkL25w5cr9Dp/rUwQhEpQgLErAPQnKHQq71WvQSA1xXr50nBH2HulA1LKEVQeRQ==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/application (2.6ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.9ms)
+Completed 200 OK in 44ms (Views: 38.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-10-30 15:22:08 -0400
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:2
+  Rendered collection of categories/_category.html.erb [4 times] (0.4ms)
+  Rendered categories/index.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.7ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  Rendered partials/_panel.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2018-10-30 15:22:10 -0400
+Processing by CategoriesController#new as HTML
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (3.0ms)
+  Rendered categories/new.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/categories" for 127.0.0.1 at 2018-10-30 15:22:12 -0400
+Processing by CategoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QGqaj0+FGvIY34XYsA2+NxF+bVAbxLMpjnRQnIMsnif/H4Sgdv/WbJSpRO25T4Ez9wwEP9JA/HnfTX373mgEKA==", "category"=>{"name"=>"", "color"=>"#000000"}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/categories_controller.rb:33
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (1.8ms)
+  Rendered categories/new.html.erb within layouts/application (2.5ms)
+  Rendered partials/_navbar.html.erb (1.0ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-30 15:22:22 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (1.8ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.1ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:22:23 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.3ms)
+  Rendered articles/new.html.erb within layouts/application (4.7ms)
+  Rendered partials/_navbar.html.erb (0.8ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.4ms)
+Completed 200 OK in 51ms (Views: 48.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:23:06 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.9ms)
+  Rendered articles/new.html.erb within layouts/application (4.2ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.8ms)
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:23:09 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"utvfUFczDYJ5AwOxS9UnoMA/9yoSb3sg6MVVfcntbfZDNDdPg6y0fFFebL6n0YkinegyFVLVIySSCA2WwuSYXA==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[36mArticle Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", ""], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.0ms)
+  Rendered articles/new.html.erb within layouts/application (2.7ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.5ms)
+Completed 200 OK in 51ms (Views: 44.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2018-10-30 15:23:30 -0400
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:3
+  Rendered articles/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/partials/_navbar.html.erb:19
+  Rendered partials/_navbar.html.erb (2.0ms)
+  Rendered partials/_notificaciones.html.erb (0.4ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.2ms)
+Completed 200 OK in 40ms (Views: 38.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/articles/new" for 127.0.0.1 at 2018-10-30 15:23:32 -0400
+Processing by ArticlesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (2.6ms)
+  Rendered articles/new.html.erb within layouts/application (3.7ms)
+  Rendered partials/_navbar.html.erb (0.9ms)
+  Rendered partials/_notificaciones.html.erb (0.5ms)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.6ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2018-10-30 15:23:33 -0400
+Processing by ArticlesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/NyE2elRRVWzb8aZv0lckU2ixH0JAKZh09BhI0LCXFR+6UXttxTP4O+JFKbLAe9LtLSioqhIhE9mVbqMlqJiUg==", "article"=>{"title"=>"", "body"=>""}, "commit"=>"Enviar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/mrcruzer/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[36mArticle Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", ""], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:38
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:38
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (3.8ms)
+  Rendered articles/new.html.erb within layouts/application (5.0ms)
+  Rendered partials/_navbar.html.erb (0.6ms)
+  Rendered partials/_notificaciones.html.erb (0.3ms)
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/partials/_panel.html.erb:3
+  Rendered partials/_panel.html.erb (1.3ms)
+Completed 200 OK in 63ms (Views: 55.6ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]

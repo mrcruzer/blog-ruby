@@ -6,7 +6,18 @@
             <div class="jumbotron">
                     <fieldset>
                         <h1><%= "#{titulo} Articulo" %></h1>
-                            <%= form_with(model: article) do |form| %>
+                            <%= form_with(model: article, local: true) do |form| %>
+                            <% if article.errors.any? %>
+                                <div id="error_explanation">
+                                    <h2><%= pluralize(article.errors.count, "error") %> guardando este articulo:</h2>
+
+                                    <ul>
+                                    <% article.errors.full_messages.each do |message| %>
+                                        <li><%= message %></li>
+                                    <% end %>
+                                    </ul>
+                                    </div>
+                                <% end %>    
                                 <div class="form-group row">     
                                     <h3><%= form.label "Titulo:", class: "col-md-6 col-form-label"%></h3>
                                     <%= form.text_field :title, class: "pt-3 col-md-6"%>
@@ -16,7 +27,6 @@
                                     <%= form.text_area :body, class: "col-md-6 area-text"%>
                                 </div>
                                 <div class="form-group">
-                                 <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token.to_s %>" />
                                     <%= form.submit "Enviar", class: "btn btn-success btn-lg col-md-3"%>
                                     <%= link_to 'Atras', root_path, class: "btn btn-secondary btn-lg col-md-3" %>
                                 </div>
