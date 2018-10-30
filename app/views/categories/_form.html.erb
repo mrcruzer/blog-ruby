@@ -23,10 +23,10 @@
 
           <div class="form-group row">
             <h3><%= form.label "Color:", class: "col-md-6 col-form-label"%></h3>
-            <%= form.text_field :color, id: :category_color, class:"col-md-6" %>
+            <%= form.color_field :color, id: :category_color, class:"col-md-6" %>
           </div>
 
-          <div class="form-group">
+          <div class="form-group row">
             <%= form.submit "Enviar", class: "btn btn-success btn-lg col-md-3" %>
             <%= link_to 'Atras', @category, class: "btn btn-secondary btn-lg col-md-3" %>
           </div>
