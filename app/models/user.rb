@@ -5,7 +5,8 @@ class User < ApplicationRecord
   include PermissionsConcern
 
 
-devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   has_many :articles
     # Un usuario tiene muchos articulos

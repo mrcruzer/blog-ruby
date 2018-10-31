@@ -1,5 +1,11 @@
 class Category < ApplicationRecord
 
+
+
+    # tiene muchas ca
+    has_many :has_categories
+    has_many :articles, through: :has_categories
+
     belongs_to :user
      # Pertenece a user
 
