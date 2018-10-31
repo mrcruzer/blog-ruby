@@ -5,7 +5,9 @@ class ArticlesController < ApplicationController
   before_action :set_articles, only: [:show, :edit, :update, :destroy]
     # Solo usara el metodo set_articles donde se le indique
 
-  before_action :authenticate_user!, only: [:edit, :update, :destroy, :create, :new]
+  # before_action :authenticate_user!, only: [:edit, :update, :destroy, :create, :new]
+
+  before_action :authenticate_editor!, only: [:new, :create, :update, :edit, :destroy]
 
     # El index mostrara, con all, Modelo
   def index
