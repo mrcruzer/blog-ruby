@@ -28,6 +28,8 @@ class ArticlesController < ApplicationController
 
     @article = Article.new
 
+    @categories = Category.all
+
   end
 
 
@@ -36,6 +38,8 @@ class ArticlesController < ApplicationController
   def create
     @article = current_user.articles.new(article_params)
         # current_user = detecta si el usuario esta logeado
+
+    @article.categories = params[:categories]
 
     respond_to do |format|
       if @article.save
@@ -108,6 +112,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :body)
+    params.require(:article).permit(:title, :body, :categories)
   end
 end

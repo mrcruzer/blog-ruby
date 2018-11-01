@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-    <% if current_user.is_editor?  %>
+    <% if current_user.is_admin?  %>
         <div class="list-group">
             <%= link_to "Administrador", articles_path, class: "list-group-item list-group-item-action active bg-primary " %>
             <%= link_to "Ver Articulos", articles_path, class: "list-group-item list-group-item-action" %>

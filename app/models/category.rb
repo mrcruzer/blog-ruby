@@ -2,11 +2,11 @@ class Category < ApplicationRecord
 
 
 
-    # tiene muchas ca
+    # tiene muchos articles
     has_many :has_categories
     has_many :articles, through: :has_categories
 
-    belongs_to :user
+    belongs_to :user, optional: true
      # Pertenece a user
 
      validates :name, :color, presence: true
