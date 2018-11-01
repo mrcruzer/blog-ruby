@@ -6,6 +6,13 @@
                     <h1><strong><%= link_to article.title, article, class: "decoracion" %></strong></h1>
                     <h5><strong><%= article.body %></strong></h5>
 
+                    <% palabra = " Categorias: " %>
+                    <% article.categories.each do |category| %>
+                        <% palabra = "#{palabra} - #{category.name}" %>
+                    <% end %>
+
+                    <p><%= palabra %></p>
+
                     <%= link_to "Mostrar", article, class: "btn btn-success"%>
                         <% if user_signed_in? %>
                             <% if current_user.is_editor? %>

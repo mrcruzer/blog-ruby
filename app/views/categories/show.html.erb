@@ -1,47 +1,57 @@
 <style type="text/css" media="screen">
   .jumbotron {
-    background: <%= @category.color %> !important ;
+    margin-top: 10px;
+  }
+
+  .categories-show {
+        background: <%= @category.color %> !important ;
+        height: 5rem;
+
   }
 
 </style>
-<div class="container-fluid">
+<div class="categories-show">
+
+  <h2 class="text-center"> <%= @category.name %> </h2>
+    <h5>
+
+    <% if !@category.user.nil? %>
+      <p class="mb-3 text-center">Creado por <strong><%= @category.user.email %></strong></p>
+      
+    <% end %>
+    </h5>
+</div>
+<% @category.articles.each do |article|%>
   <div class="jumbotron">
     <div class="row">
       <div class="col-md-6 col-sm-6">
-
-       
         <div class="card border-success mb-3" style="max-width: 20rem;">
-          <div class="card-header"><h3><strong>Name:</strong></h3></div>
-          <div class="card-body">
-            <h4 class="card-title"><strong><%= @category.name %></strong></h4>
-          </div>
+          <div class="card-header"><h3><strong>Nombre Articulo:</strong></h3></div>
+            <div class="card-body">
+              <h4 class="card-title"><strong><%= article.title %></strong></h4>
+            </div>
         </div>    
       </div>
 
       <div class="col-md-6 col-sm-6">
-       
-        
         <div class="card border-success mb-3" style="max-width: 20rem;">
-          <div class="card-header"><h3><strong>Color:</strong></h3></div>
-          <div class="card-body">
-            <h4 class="card-title"><h5><strong><%= @category.color %></strong><h5></h4>
-          </div>
+          <div class="card-header"><h3><strong>Cuerpo:</strong></h3></div>
+            <div class="card-body">
+              <h4 class="card-title"><h5><strong><%= article.body %></strong><h5></h4>
+            </div>
         </div>
       </div>
 
       <div class="col-md-12 col-sm-12">
-       
-        <%= link_to 'Edit', edit_category_path(@category), class: "btn btn-warning" %>
-        <%= link_to 'Back', categories_path, class: "btn btn-success" %>
-
+          <% if user_signed_in? && current_user.is_admin? %>
+            <%= link_to 'Edit', edit_category_path(@category), class: "btn btn-warning" %>
+            <%= link_to 'Eliminar', category_path(@category), method: :delete, data: {confirm: "Estas Seguro?"}, class: "btn btn-danger"%>
+          <% end %>
+            <%= link_to 'Back', categories_path, class: "btn btn-success" %>
       </div>
-      
-  
-
     </div>   
   </div>
-</div>
-
+<% end %>
 
 
 

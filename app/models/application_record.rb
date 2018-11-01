@@ -1,7 +1,6 @@
 class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
-  include PermissionsConcern
 
 
   #metodos para verificar si esta logueado

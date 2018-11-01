@@ -5,9 +5,11 @@
 
 </style>
 
-<div class="col-md-3">
+<div class="col-md-6">
     <div class="jumbotron <%= "#{category.name}" %>">
         <h2><%= category.name %></h2>
+
+        <h4><%= "Contiene #{category.articles.count} articulo (s)" %></h4>
        
     </div>
 </div> 

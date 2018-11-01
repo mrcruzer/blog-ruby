@@ -28,7 +28,7 @@
                                     <%= form.text_area :body, class: "col-md-6 area-text"%>
                                 </div>
 
-                                <% @categories.each do |category| %>
+                                <% Category.all.each do |category| %>
                                     <%= check_box_tag "categories[]", category.id%>
                                         <%# Categories[] = es como un arreglo permite guardar mas id  %>
                                     <%= category.name %><br>

@@ -1,0 +1,32 @@
+<div class="jumbotron">
+    <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Titulo:</th>
+                    <th>Cuerpo:</th>
+                    <th>Email:</th>
+                    <th>Fecha de creacion</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody class="bg-info">
+                <% @articles.each do |arti| %>
+                    <tr>
+                        <td ><%= arti.title %></td>
+                        <td><%= arti.body %></td>
+                        <td><%= arti.user.email %></td>
+                        <td><%= arti.created_at %></td>
+                        <td>
+                            <%= link_to "Ver", arti %>
+                            <%= link_to "Editar", edit_article_path(arti) %>
+                            <%= link_to "Eliminar", arti, method: :delete, data: {confirm: "Estas Seguro?"}  %>
+                        </td>
+
+
+                    </tr>
+                <% end %>
+            </tbody>
+
+    </table>
+</div>

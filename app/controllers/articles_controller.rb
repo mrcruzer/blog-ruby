@@ -13,6 +13,12 @@ class ArticlesController < ApplicationController
     # El index mostrara, con all, Modelo
   def index
     @articles = Article.all
+
+      # Si el usuario esta logeado y es admin mostrara esta vista
+    if user_signed_in? && current_user.is_editor?
+      render "admin_article"
+
+    end
   end
 
 
@@ -36,20 +42,26 @@ class ArticlesController < ApplicationController
 
     # Metodo para crear
   def create
-    @article = current_user.articles.new(article_params)
-        # current_user = detecta si el usuario esta logeado
 
-    @article.categories = params[:categories]
+    if params[:categories].nil?
+      redirect_to new_article_path, warning: "Debes seleccionar minimo una categoria"
+    
+    else
+      @article = current_user.articles.new(article_params)
+          # current_user = detecta si el usuario esta logeado
 
-    respond_to do |format|
-      if @article.save
-        format.html { redirect_to @article, notice: "Articulo Creado" }
-        format.json { render :show, status: :created, location: @article}
-      else
-        format.html {render 'new'}
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
-    end
+      @article.categories = params[:categories]
+
+      respond_to do |format|
+        if @article.save
+          format.html { redirect_to @article, warning: "Articulo Creado" }
+          format.json { render :show, status: :created, location: @article}
+        else
+          format.html {render 'new'}
+          format.json { render json: @article.errors, status: :unprocessable_entity }
+        end
+      end   
+    end  
   end
 
 
@@ -68,7 +80,7 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
 
-    format.html { redirect_to articles_path }
+    format.html { redirect_to articles_path, warning: "Articulo borrado" }
     format.json { head :no_content }
 
     end
@@ -86,7 +98,7 @@ class ArticlesController < ApplicationController
 
       if @article.update(article_params)
 
-        format.html{ redirect_to article_path, notice: "Articulo Actualizado"}
+        format.html{ redirect_to article_path, warning: "Articulo Actualizado"}
         format.json { render :show, status: :created, location: @article}
 
       else
