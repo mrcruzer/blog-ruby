@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  get 'articles/search'
+
   devise_for :users
   resources :categories
   resources :articles
@@ -8,4 +11,6 @@ Rails.application.routes.draw do
   # ruta que cargara por defecto
   
   get 'welcome/contactos'
+
+
 end

@@ -1,28 +1,22 @@
 <div class="jumbotron">
-    <table class="table">
+<h1>Administrador</h1>
+<%= link_to "Normal", articles_path(user_normal:true), class: "btn btn-success mb-3" %>
+    <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
                     <th>Titulo:</th>
-                    <th>Cuerpo:</th>
-                    <th>Email:</th>
-                    <th>Fecha de creacion</th>
-                    <th></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody class="bg-info">
                 <% @articles.each do |arti| %>
-                    <tr>
+                    <tr class="text-center">
                         <td ><%= arti.title %></td>
-                        <td><%= arti.body %></td>
-                        <td><%= arti.user.email %></td>
-                        <td><%= arti.created_at %></td>
                         <td>
-                            <%= link_to "Ver", arti %>
-                            <%= link_to "Editar", edit_article_path(arti) %>
-                            <%= link_to "Eliminar", arti, method: :delete, data: {confirm: "Estas Seguro?"}  %>
+                            <%= link_to "Ver", arti, class: "btn btn-info text-center"%>
+                            <%= link_to "Editar", edit_article_path(arti), class: "btn btn-warning text-center" %>
+                            <%= link_to "Eliminar", arti, method: :delete, data: {confirm: "Estas Seguro?"}, class: "btn btn-danger text-center"  %>
                         </td>
-
 
                     </tr>
                 <% end %>

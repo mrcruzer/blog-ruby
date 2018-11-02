@@ -8,14 +8,28 @@ class ArticlesController < ApplicationController
 
     before_action :authenticate_admin!, only: [:destroy]
 
+    # Metodo para hacer busquedas
+  def search
+    if params[:titulo]
 
+      @articles = Article.titulo(params[:titulo])
+
+    else
+
+      @articles = Article.all
+
+    end
+  end
 
     # El index mostrara, con all, Modelo
   def index
-    @articles = Article.all
+
+      @articles = Article.ultimos
 
       # Si el usuario esta logeado y es admin mostrara esta vista
-    if user_signed_in? && current_user.is_editor?
+    if user_signed_in? && current_user.is_editor? && !params.has_key?(:user_normal)
+    
+    
       render "admin_article"
 
     end

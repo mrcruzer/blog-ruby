@@ -4,7 +4,7 @@ class Article < ApplicationRecord
 
 
     has_many :has_categories
-    has_many :categories, through: :has_categories
+    has_many :categories, through: :has_categories, dependent: :destroy
 
 
 
@@ -20,8 +20,14 @@ class Article < ApplicationRecord
     validates :title, length: { in: 5..15 }
     validates :body, length: { minimum: 25}
 
+    #Scopes, Son busquedas en query, se usan en el controlador
+    scope :ultimos, -> {order("created_at DESC")}
+    # Ex:- scope :active, -> {where(:active => true)}
+
+    scope :titulo, -> (title) { where("title LIKE ?", "#{title}%") }
+
     def categories=(value)
-        @categories = value
+        @categories = value 
 
         # raise @categories.to_yaml
     end
