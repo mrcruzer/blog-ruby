@@ -3,10 +3,21 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
 
+#truncate
+gem 'truncate_html', '~> 0.9.3'
+# trix
+gem 'trix-rails', require: 'trix'
 # devise
 gem 'devise'
+
+# Procesamiento de imagenes
+gem 'mini_magick'
 # iconv
 gem "iconv", "~> 1.0.3"
+# carrierwave - Subida de imagenes
+gem 'carrierwave', '~> 1.0'
+# paginador
+gem 'will_paginate'
 # meta-tags
 gem 'meta-tags'
 # Boostrap

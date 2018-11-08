@@ -1,29 +1,8 @@
 <div class="container-fluid">
     <div class="row">
-        <% @articles.each do |article| %>
-            <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="jumbotron">
-                    <h1><strong><%= link_to article.title, article, class: "decoracion" %></strong></h1>
-                    <h5><strong><%= article.body %></strong></h5>
-
-                    <% palabra = " Categorias: " %>
-                    <% article.categories.each do |category| %>
-                        <% palabra = "#{palabra} - #{category.name}" %>
-                    <% end %>
-
-                    <p><%= palabra %></p>
-
-                    <%= link_to "Mostrar", article, class: "btn btn-success"%>
-                        <% if user_signed_in? %>
-                            <% if current_user.is_editor? %>
-                                <%= link_to "Editar", edit_article_path(article), class: "btn btn-warning" %>
-                            <% end %>
-                            <% if current_user.is_admin? %> 
-                                <%= link_to "Eliminar", article, method: :delete, data: {confirm: "Estas Seguro?"}, class: "btn btn-danger" %>
-                            <% end %>
-                        <% end %>
-                </div>
-            </div>
-        <% end %>
+        <%= render @articles %>
+    </div>
+    <div class="flickr_pagination" style="margin-top: 20px; margin-bottom: 20px;">
+    <%= will_paginate @articles %>
     </div>
 </div>

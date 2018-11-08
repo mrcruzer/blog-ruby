@@ -1,5 +1,7 @@
 class Article < ApplicationRecord
 
+    mount_uploader :images, ImagesUploader
+
     include PermissionsConcern
 
 
@@ -17,7 +19,7 @@ class Article < ApplicationRecord
         # validaciones
     validates :title, uniqueness: true
     validates :title, :body, presence: true
-    validates :title, length: { in: 5..15 }
+    validates :title, length: { maximum: 25}
     validates :body, length: { minimum: 25}
 
     #Scopes, Son busquedas en query, se usan en el controlador

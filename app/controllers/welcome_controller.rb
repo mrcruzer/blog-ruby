@@ -7,8 +7,8 @@ class WelcomeController < ApplicationController
 
     end
 
-    def contactos
-        @email = "isaac@gmail.com"
+    def contacto
+        @contacts = Contact.new
             #variable global
     end
     

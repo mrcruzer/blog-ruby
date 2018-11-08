@@ -12,6 +12,13 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     @categories = Category.all
+
+    if user_signed_in? && current_user.is_editor? && !params.has_key?(:user_normal)
+    
+    
+      render "admin_category"
+
+    end
   end
 
   # GET /categories/1

@@ -1,0 +1,16 @@
+<div class="col-sm-12 col-md-6 col-lg-6 mb-2">
+         <div class="card bg-light h-100">
+            <%= image_tag article.images.thumb.url, class: "figure-img img-fluid rounded" %>
+            <div class="card-body">
+               <h5 class="card-title border-bottom pb-3"><strong><%= link_to truncate(article.title, length:20), article, class: "decoracion" %></strong>
+                <a class="float-right  btn-info d-inline-flex share"></a></h5>
+               <p class="card-text"><strong><%= truncate_html(article.body.html_safe, length: 250) %></strong></p>
+                <%= link_to "Mostrar Articulo", article, class: "btn btn-success float-right" %>
+                <% palabra = " Categorias: " %>
+        <% article.categories.each do |category| %>
+            <% palabra = "#{palabra} #{category.name} - " %>
+        <% end %> 
+        <p><%= palabra %></p>
+            </div>
+         </div>
+</div>

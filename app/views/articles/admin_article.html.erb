@@ -1,17 +1,22 @@
-<div class="jumbotron">
+<div class="jumbotron table-responsive">
 <h1>Administrador</h1>
 <%= link_to "Normal", articles_path(user_normal:true), class: "btn btn-success mb-3" %>
     <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
+                    <th>#</th>
                     <th>Titulo:</th>
+                    <th>Fecha De Creacion</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody class="bg-info">
                 <% @articles.each do |arti| %>
                     <tr class="text-center">
+                        <td ><%= arti.id %></td>
                         <td ><%= arti.title %></td>
+                        <td ><%= arti.created_at.strftime('%b, %d, %Y') %></td>
+
                         <td>
                             <%= link_to "Ver", arti, class: "btn btn-info text-center"%>
                             <%= link_to "Editar", edit_article_path(arti), class: "btn btn-warning text-center" %>
@@ -23,4 +28,8 @@
             </tbody>
 
     </table>
+    
 </div>
+<div class="flickr_pagination" style="margin-top: 20px; margin-bottom: 20px;">
+    <%= will_paginate @articles %>
+    </div>

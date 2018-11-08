@@ -5,7 +5,6 @@ Rails.application.configure do
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   
   config.cache_classes = false
@@ -62,4 +61,30 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+  config.action_mailer.delivery_method = :sendmail
+# Defaults to:
+# config.action_mailer.sendmail_settings = {
+#   location: '/usr/sbin/sendmail',
+#   arguments: '-i'
+# }
+
+  # config.action_mailer.raise_delivery_errors = true
+
+  # config.action_mailer.default_options = {from: 'mercedescabrera03@gmail.com'}
+
+  config.action_mailer.default_url_options = { :host => 'http://localhost:3000' }
+
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    port: 587,
+    address: 'smtp.gmail.com',
+    user_name: 'isaacavelino14@gmail.com',
+    password:       'certificado16',
+    authentication: 'plain',
+    enable_starttls_auto: true  
+}
+
 end

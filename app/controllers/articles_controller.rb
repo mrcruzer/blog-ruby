@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
     # El index mostrara, con all, Modelo
   def index
 
-      @articles = Article.ultimos
+      @articles = Article.paginate(:page => params[:page], :per_page => 2).ultimos
 
       # Si el usuario esta logeado y es admin mostrara esta vista
     if user_signed_in? && current_user.is_editor? && !params.has_key?(:user_normal)
@@ -138,6 +138,6 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :body, :categories)
+    params.require(:article).permit(:title, :body, :categories, :images)
   end
 end

@@ -1,5 +1,7 @@
 class Category < ApplicationRecord
 
+    mount_uploader :images, ImagesUploader
+
 
 
     # tiene muchos articles
