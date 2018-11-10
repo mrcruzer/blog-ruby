@@ -56,11 +56,6 @@ class ArticlesController < ApplicationController
 
     # Metodo para crear
   def create
-
-    if params[:categories].nil?
-      redirect_to new_article_path, warning: "Debes seleccionar minimo una categoria"
-    
-    else
       @article = current_user.articles.new(article_params)
           # current_user = detecta si el usuario esta logeado
 
@@ -74,8 +69,7 @@ class ArticlesController < ApplicationController
           format.html {render 'new'}
           format.json { render json: @article.errors, status: :unprocessable_entity }
         end
-      end   
-    end  
+      end
   end
 
 
@@ -105,6 +99,8 @@ class ArticlesController < ApplicationController
 
   # Metodo para actualizar
   def update
+
+    @article.categories = @article.categories.ids
 
     #usara el set_articles, Primero
 

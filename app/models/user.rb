@@ -14,4 +14,7 @@ class User < ApplicationRecord
   has_many :categories
     # Un usuario tiene muchas categorias
 
+  has_many :comments
+    # Un usuario tiene muchos comentarios
+
 end

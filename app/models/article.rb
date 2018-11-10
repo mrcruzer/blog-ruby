@@ -8,6 +8,9 @@ class Article < ApplicationRecord
     has_many :has_categories
     has_many :categories, through: :has_categories, dependent: :destroy
 
+    # articulo tiene muchos comentarios
+    has_many :comments
+
 
 
     belongs_to :user, optional: true
@@ -21,6 +24,7 @@ class Article < ApplicationRecord
     validates :title, :body, presence: true
     validates :title, length: { maximum: 25}
     validates :body, length: { minimum: 25}
+    validate :valide_categories
 
     #Scopes, Son busquedas en query, se usan en el controlador
     scope :ultimos, -> {order("created_at DESC")}
@@ -32,6 +36,18 @@ class Article < ApplicationRecord
         @categories = value 
 
         # raise @categories.to_yaml
+    end
+
+    def getCategories
+        @categories
+    end
+
+    # Metodo para validar si esta en blanco
+    def valide_categories
+        if self.getCategories.blank?
+            errors.add(:categories, "Debe Agregar Una Categoria")
+        end
+
     end
 
     private
