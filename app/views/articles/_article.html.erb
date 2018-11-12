@@ -9,8 +9,8 @@
                 <% palabra = " Categorias: " %>
         <% article.categories.each do |category| %>
             <% palabra = "#{palabra} #{category.name} - " %>
+            <h5>Categorias: <span class="badge badge-info"><%= category.name %></span></h5>
         <% end %> 
-        <p><%= palabra %></p>
             </div>
          </div>
 </div>

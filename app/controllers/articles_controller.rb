@@ -40,6 +40,8 @@ class ArticlesController < ApplicationController
 
     #Usaremos el metodo set_articles del before_action
 
+    @comment = Comment.new
+
   end
 
 
@@ -126,14 +128,17 @@ class ArticlesController < ApplicationController
 
     # Metodo Reutilizable
   def set_articles
-
-    @article = Article.find(params[:id])
-
+    # Si ocurre un error 
+    begin
+      @article = Article.find(params[:id]) 
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_path, warning: "Articulo No Disponible"
+    end
   end
 
 
   private
   def article_params
-    params.require(:article).permit(:title, :body, :categories, :images)
+    params.require(:article).permit(:title, :body, :images, category_ids: [])
   end
 end

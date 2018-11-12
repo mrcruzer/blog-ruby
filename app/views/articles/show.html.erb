@@ -1,27 +1,48 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6 mb-2">
-         <div class="card bg-light mb-3 h-100">
+        <div class="col-sm-12 col-md-10 col-lg-10 mb-2">
+         <div class="card bg-light mb-3">
             <%= image_tag @article.images.thumb.url, class: "figure-img img-fluid rounded" %>
             <div class="card-body">
                <h5 class="card-title border-bottom pb-3"><strong><%= @article.title %></strong>
                 <a class="float-right  btn-info d-inline-flex share"></a></h5>
                <p class="card-text"><strong><%= truncate_html(@article.body.html_safe, length: 250) %></strong></p>
                 <% palabra = " Categorias: " %>
-        <% @article.categories.each do |category| %>
-            <% palabra = "#{palabra} #{category.name} - " %>
-        <% end %> 
-        <p><%= palabra %></p>
-            <% if user_signed_in?%>
-                    <%= link_to "Editar", edit_article_path, class: "btn btn-warning" %>
-                    <%= link_to "Eliminar", article_path(@article), method: :delete, data: {confirm: "Estas Seguro?"}, class: "btn btn-danger" %>
-            <% end %>
-                    <%= link_to 'Atras', root_path, class: "btn btn-success" %>
-      
+                    <% @article.categories.each do |category| %>
+                        <% palabra = "#{palabra} #{category.name} - " %>
+                        <h5>Categorias: <span class="badge badge-info"><%= category.name %></span></h5>
+                    <% end %>
+                    <% if user_signed_in? %>
+                        <%= render "comments/form", comment: @comment%>
+                    <% end %>
+
+                    <ul>
+                        <% @article.comments.each do |comment| %>
+                            <li>
+                                <div class="row mt-3">
+                                    <div class="col-md-4">
+                                        <%= comment.body %>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <% if user_signed_in? && current_user == comment.user %>
+                                            <%= link_to "Editar" , edit_article_comment_url(@article, comment), class: "btn btn-info"%>
+                                            <%= link_to "Eliminar", [@article,comment], method: :delete, data: {confirm: "Estas Seguro?"}, class: "btn btn-warning"%>
+                                        <% end %>
+                                    </div>
+                                </div>
+                            </li>
+                        <% end %>
+                    </ul>
+
          </div>
+
         </div>
+
+
     </div>
 </div>
+
+
 
 
 

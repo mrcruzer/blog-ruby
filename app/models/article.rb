@@ -32,6 +32,7 @@ class Article < ApplicationRecord
 
     scope :titulo, -> (title) { where("title LIKE ?", "#{title}%") }
 
+        # Metodo que permite asingar valor a un atributo de un objeto
     def categories=(value)
         @categories = value 
 

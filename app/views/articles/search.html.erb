@@ -1,12 +1,16 @@
 <div class= "jumbotron">
     <div class="row">
-        <% @articles.each do |art| %>
-            <div class="col-md-6">
-                <h1><%= link_to art.title, art, class: "decoracion" %></h1>
-                <p><%= art.body%><p>
-                <p><%= link_to "Ver Mas", art, class: "btn btn-success"%><p>
+        <% unless @articles.blank? %>
+            <% @articles.each do |art| %>
+                <div class="col-md-6">
+                    <h1><%= link_to art.title, art, class: "decoracion" %></h1>
+                    <p><%= truncate_html(art.body, length: 400)  %><p>
+                    <p><%= link_to "Ver Mas", art, class: "btn btn-success"%><p>
 
-            </div>
+                </div>
+            <% end %>
+        <% else %>
+            <h2>No Existe Busqueda</h2>
         <% end %>
     </div>
 </div>
