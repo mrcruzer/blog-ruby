@@ -9,7 +9,6 @@ gem 'truncate_html', '~> 0.9.3'
 gem 'trix-rails', require: 'trix'
 # devise
 gem 'devise'
-
 # Procesamiento de imagenes
 gem 'mini_magick'
 # iconv
