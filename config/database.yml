@@ -23,7 +23,7 @@ test:
  # Configuracion para subirlo a produccion
 production:
     adapter: postgresql
-    encoding: Unicode
+    encoding: unicode
     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
     database: blog_production
     username: blog
