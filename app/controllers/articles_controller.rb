@@ -128,7 +128,7 @@ class ArticlesController < ApplicationController
 
     # Metodo Reutilizable
   def set_articles
-    # Si ocurre un error 
+    # Si ocurre un error  
     begin
       @article = Article.find(params[:id]) 
     rescue ActiveRecord::RecordNotFound
