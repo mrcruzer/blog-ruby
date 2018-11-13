@@ -23,9 +23,9 @@ test:
  # Configuracion para subirlo a produccion
 production:
     adapter: postgresql
-    encoding: unicode
+    encoding: Unicode
     pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
     database: blog_production
     username: blog
-    password: <% ENV['blog_DATBASE_PASSWORD'] %>
+    password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
 
