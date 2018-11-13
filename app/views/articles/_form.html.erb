@@ -33,7 +33,7 @@
                                 </div>
 
                                 <% Category.all.each do |category| %>
-                                    <%= check_box_tag "category_ids[]", category.id%>
+                                    <%= check_box_tag "categories[]", category.id%>
                                         <%# categories[] = es como un arreglo permite guardar mas id  %>
                                     <%= category.name %><br>
                                 <% end %>
