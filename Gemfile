@@ -10,9 +10,6 @@ gem 'trix-rails', require: 'trix'
 # devise
 gem 'devise'
 
-# Use sqlite3 as the database for Active Record
-  gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
-
 # Procesamiento de imagenes
 gem 'mini_magick'
 # iconv
@@ -60,7 +57,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', git: "https://github.com/larskanis/sqlite3-ruby", branch: "add-gemspec"
+  gem 'sqlite3'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
