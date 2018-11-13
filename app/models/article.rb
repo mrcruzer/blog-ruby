@@ -43,7 +43,7 @@ class Article < ApplicationRecord
         @categories
     end
 
-    # Metodo para validar si esta en blanco
+    # Metodo para validar si esta en blanco y la categoria esta nula
     def valide_categories
         if self.getCategories.blank? && self.id.nil?
             errors.add(:categories, "Debe Agregar Una Categoria")
