@@ -23,8 +23,9 @@
                                     <%= form.text_field :title, class: "col-md-6", maxlength: 25 %>
                                 </div>
                                 
-                                <div class="form-group">
-                                    <%= form.trix_editor :body, minlength: 25 %>
+                                <div class="form-group row">
+                                    <h3 class="muevelo"><%= form.label "Cuerpo:", class: "col-md-6 col-form-label"%></h3>
+                                    <%= form.text_area :body, minlength: 25, class: "area-text col-md-6" %>
                                 </div>
 
                                 <div class="form-group">
